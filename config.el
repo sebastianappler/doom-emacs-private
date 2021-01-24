@@ -55,6 +55,10 @@
 ;;(add-hook 'after-init-hook' treemacs-select-window)
 
 ;;
+;;;; Packages
+(use-package! treemacs-all-the-icons)
+
+;;
 ;;; UI
 
 ;; "monospace" means use the system default. However, the default is usually two
@@ -66,10 +70,9 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 
-;;
-;;;; Packages
-(use-package! treemacs-all-the-icons)
-
+;; Doom initialize ui changes very late in the startup process
+;; To make sure they are loaded append logic using either doom-load-theme-hook or doom-after-init-modules-hook
+;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
 (add-hook! 'doom-load-theme-hook :append
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
