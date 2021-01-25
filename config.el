@@ -65,6 +65,8 @@
 (use-package! treemacs-all-the-icons)
 
 (use-package! treemacs
+  :init
+    (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   :config
   (progn
     (setq treemacs-indentation   1)
