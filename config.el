@@ -6,8 +6,14 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Sebastian Appler"
+      user-mail-address "sebastian.appler@protonmail.com"
+
+      treemacs-width 32
+      display-line-numbers-type nil
+      lsp-ui-sideline-enable nil
+      lsp-enable-symbol-highlighting nil
+      )
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -25,7 +31,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dracula)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -58,13 +64,28 @@
 ;;;; Packages
 (use-package! treemacs-all-the-icons)
 
+(use-package! treemacs
+  :config
+  (progn
+    (setq treemacs-indentation   1)
+  )
+  :bind
+  (:map global-map
+     ("M-0"     . treemacs-select-window)))
+
+(use-package! treemacs-icons-dired
+  :after treemacs dired
+  :ensure t
+  :config (treemacs-icons-dired-mode))
+
 ;;
 ;;; UI
 
 ;; "monospace" means use the system default. However, the default is usually two
 ;; points larger than I'd like, so I specify size 12 here.
-;;(setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
+      )
 
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -77,3 +98,7 @@
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
 )
+
+(custom-theme-set-faces! 'doom-dracula
+  `(markdown-code-face :background ,(doom-darken 'bg 0.075))
+  `(font-lock-variable-name-face :foreground ,(doom-lighten 'magenta 0.6)))
