@@ -105,7 +105,6 @@
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
-
 ;; Doom initialize ui changes very late in the startup process
 ;; To make sure they are loaded append logic using either doom-load-theme-hook or doom-after-init-modules-hook
 ;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
