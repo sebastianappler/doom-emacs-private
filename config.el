@@ -113,7 +113,3 @@
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
 )
-
-;; (custom-theme-set-faces! 'doom-dracula
-;;   `(markdown-code-face :background ,(doom-darken 'bg 0.075))
-;;   `(font-lock-variable-name-face :foreground ,(doom-lighten 'magenta 0.6)))
