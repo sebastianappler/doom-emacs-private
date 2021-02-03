@@ -31,7 +31,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-opera)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -114,6 +114,6 @@
   (message "Loaded all-the-icons treemacs theme!")
 )
 
-(custom-theme-set-faces! 'doom-dracula
-  `(markdown-code-face :background ,(doom-darken 'bg 0.075))
-  `(font-lock-variable-name-face :foreground ,(doom-lighten 'magenta 0.6)))
+;; (custom-theme-set-faces! 'doom-dracula
+;;   `(markdown-code-face :background ,(doom-darken 'bg 0.075))
+;;   `(font-lock-variable-name-face :foreground ,(doom-lighten 'magenta 0.6)))
