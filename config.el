@@ -93,6 +93,10 @@
   ("C-c t $" . centaur-tabs-select-end-tab)
 )
 
+(use-package! ox-hugo
+  :ensure t
+  :after ox)
+
 ;;
 ;;; UI
 
