@@ -69,7 +69,10 @@
     (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   :config
   (progn
-    (setq treemacs-indentation   1)
+    (
+      setq treemacs-indentation          1
+    )
+    (treemacs-git-mode -1)
   )
   :bind
   (:map global-map
@@ -99,12 +102,6 @@
 
 ;;
 ;;; UI
-
-;; "monospace" means use the system default. However, the default is usually two
-;; points larger than I'd like, so I specify size 12 here.
-(setq doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
-      )
 
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
