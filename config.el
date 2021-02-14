@@ -113,3 +113,10 @@
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
 )
+
+;;
+;;;; Templates
+(setq org-capture-templates '(
+  ("h" "Hugo post" entry (file+olp "~/hugo/quickstart/hugo.org" "Blog")
+   "* %^{TITLE}\n:PROPERTIES:\n:EXPORT_FILE_NAME: \%^{FILE_NAME} \n:EXPORT_DATE: %(format-time-string \"%Y-%m-%d\")\n:END:\n%?")
+))
