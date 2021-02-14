@@ -118,5 +118,20 @@
 ;;;; Templates
 (setq org-capture-templates '(
   ("h" "Hugo post" entry (file+olp "~/hugo/quickstart/hugo.org" "Blog")
-   "* %^{TITLE}\n:PROPERTIES:\n:EXPORT_FILE_NAME: \%^{FILE_NAME} \n:EXPORT_DATE: %(format-time-string \"%Y-%m-%d\")\n:END:\n%?")
+  (function org-hugo-new-subtree-post-capture-template))
 ))
+
+(with-eval-after-load 'org-capture
+  (defun org-hugo-new-subtree-post-capture-template ()
+    (let* ((title (read-from-minibuffer "Post Title: "))
+    (fname (org-hugo-slug title)))
+      (mapconcat #'identity `(
+        ,(concat "* " title)
+        ":PROPERTIES:"
+        ,(concat ":EXPORT_FILE_NAME: " (format-time-string "%Y-%m-%d-") fname)
+        ,(concat ":EXPORT_DATE: " (format-time-string "%Y-%m-%d"))
+        ":END:"
+        "%?\n")
+        "\n"))
+    )
+)
