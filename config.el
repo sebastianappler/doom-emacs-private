@@ -130,6 +130,8 @@
         ":PROPERTIES:"
         ,(concat ":EXPORT_FILE_NAME: " (format-time-string "%Y-%m-%d-") fname)
         ,(concat ":EXPORT_DATE: " (format-time-string "%Y-%m-%d"))
+        ":EXPORT_DESCRIPTION: "
+        ":EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lead \"\" :contributors '(\"Sebastian Appler\")'"
         ":END:"
         "%?\n")
         "\n"))
