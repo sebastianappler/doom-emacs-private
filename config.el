@@ -116,10 +116,11 @@
 
 ;;
 ;;;; Templates
-(setq org-capture-templates '(
-  ("h" "Hugo post" entry (file+olp "./blog/posts.org" "Blog")
-  (function org-hugo-new-subtree-post-capture-template))
-))
+(with-eval-after-load 'org
+  (setq org-capture-templates '(
+    ("h" "Hugo post" entry (file+olp "./blog/posts.org" "Blog")
+    (function org-hugo-new-subtree-post-capture-template))))
+)
 
 (with-eval-after-load 'org-capture
   (defun org-hugo-new-subtree-post-capture-template ()
