@@ -92,6 +92,7 @@
   ("C-c t k" . centaur-tabs-forward)
   ("C-c t j" . centaur-tabs-backward)
   ("C-c t >" . centaur-tabs-move-current-tab-to-right)
+  ("C-c t <" . centaur-tabs-move-current-tab-to-left)
   ("C-c t 0" . centaur-tabs-select-beg-tab)
   ("C-c t $" . centaur-tabs-select-end-tab)
 )
