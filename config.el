@@ -72,7 +72,7 @@
     (
       setq treemacs-indentation          1
     )
-    (treemacs-git-mode -1)
+   ;; (treemacs-git-mode -1)
   )
   :bind
   (:map global-map
@@ -128,12 +128,12 @@
     (let* ((title (read-from-minibuffer "Post Title: "))
     (fname (org-hugo-slug title)))
       (mapconcat #'identity `(
-        ,(concat "* " title)
+        ,(concat "* TODO " title)
         ":PROPERTIES:"
-        ,(concat ":EXPORT_FILE_NAME: " (format-time-string "%Y-%m-%d-") fname)
+        ,(concat ":EXPORT_FILE_NAME: " fname)
         ,(concat ":EXPORT_DATE: " (format-time-string "%Y-%m-%d"))
-        ":EXPORT_DESCRIPTION: "
-        ":EXPORT_HUGO_CUSTOM_FRONT_MATTER: :lead \"\" :contributors '(\"Sebastian Appler\")'"
+        ;;":EXPORT_DESCRIPTION: "
+        ;;":EXPORT_HUGO_CUSTOM_FRONT_MATTER: "
         ":END:"
         "%?\n")
         "\n"))
