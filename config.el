@@ -41,9 +41,6 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-;; FIXME Fix for emacs 27
-;; https://github.com/emacs-lsp/lsp-mode/issues/1778
-;; (setq lsp-gopls-codelens nil)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
