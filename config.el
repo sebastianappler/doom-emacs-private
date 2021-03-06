@@ -41,6 +41,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; FIXME Fix for emacs 27
+;; https://github.com/emacs-lsp/lsp-mode/issues/1778
+;; (setq lsp-gopls-codelens nil)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -64,6 +67,12 @@
 ;;;; Packages
 (use-package! treemacs-all-the-icons)
 
+(use-package! treemacs-icons-dired
+  :after treemacs dired
+  :ensure t
+  :config (treemacs-icons-dired-mode))
+
+;; Treemacs
 (use-package! treemacs
   :init
     (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
@@ -78,11 +87,17 @@
   (:map global-map
      ("M-0"     . treemacs-select-window)))
 
-(use-package! treemacs-icons-dired
-  :after treemacs dired
-  :ensure t
-  :config (treemacs-icons-dired-mode))
 
+(defun treemacs-expand-when-first-used (&optional visibility)
+  (when (or (null visibility) (eq visibility 'none))
+    (treemacs-do-for-button-state
+     :on-root-node-closed (treemacs-toggle-node)
+     :no-error t)))
+
+(add-hook! 'treemacs-select-functions #'treemacs-expand-when-first-used)
+(add-hook! 'treemacs-switch-workspace-hook #'treemacs-expand-when-first-used)
+
+;; Centaur tabs
 (use-package! centaur-tabs
   :bind
   ("C-c t s" . centaur-tabs-counsel-switch-group)
@@ -97,6 +112,7 @@
   ("C-c t $" . centaur-tabs-select-end-tab)
 )
 
+;; ox-hugo
 (use-package! ox-hugo
   :ensure t
   :after ox)
@@ -106,14 +122,6 @@
 
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
-
-;; Doom initialize ui changes very late in the startup process
-;; To make sure they are loaded append logic using either doom-load-theme-hook or doom-after-init-modules-hook
-;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
-(add-hook! 'doom-load-theme-hook :append
-  (treemacs-load-theme "all-the-icons")
-  (message "Loaded all-the-icons treemacs theme!")
-)
 
 ;;
 ;;;; Templates
@@ -139,3 +147,14 @@
         "\n"))
     )
 )
+
+;;
+;; Startup
+;; Doom initialize ui changes very late in the startup process
+;; To make sure they are loaded append logic using either doom-load-theme-hook or doom-after-init-modules-hook
+;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
+(add-hook! 'doom-load-theme-hook :append
+  (treemacs-load-theme "all-the-icons")
+  (message "Loaded all-the-icons treemacs theme!")
+  (doom/quickload-session)
+  (treemacs))
