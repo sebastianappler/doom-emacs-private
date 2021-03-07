@@ -3,7 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Sebastian Appler"
@@ -58,61 +57,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-;;(add-hook 'after-init-hook' treemacs-select-window)
-
-;;
-;;;; Packages
-(use-package! treemacs-all-the-icons)
-
-(use-package! treemacs-icons-dired
-  :after treemacs dired
-  :ensure t
-  :config (treemacs-icons-dired-mode))
-
-;; Treemacs
-(use-package! treemacs
-  :init
-    (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
-  :config
-  (progn
-    (
-      setq treemacs-indentation          1
-    )
-   ;; (treemacs-git-mode -1)
-  )
-  :bind
-  (:map global-map
-     ("M-0"     . treemacs-select-window)))
-
-
-(defun treemacs-expand-when-first-used (&optional visibility)
-  (when (or (null visibility) (eq visibility 'none))
-    (treemacs-do-for-button-state
-     :on-root-node-closed (treemacs-toggle-node)
-     :no-error t)))
-
-(add-hook! 'treemacs-select-functions #'treemacs-expand-when-first-used)
-(add-hook! 'treemacs-switch-workspace-hook #'treemacs-expand-when-first-used)
-
-;; Centaur tabs
-(use-package! centaur-tabs
-  :bind
-  ("C-c t s" . centaur-tabs-counsel-switch-group)
-  ("C-c t w" . centaur-tabs--kill-this-buffer-dont-ask)
-  ("C-c t k" . centaur-tabs-kill-all-buffers-in-current-group)
-  ("C-c t o" . centaur-tabs-kill-other-buffers-in-current-group)
-  ("C-c t k" . centaur-tabs-forward)
-  ("C-c t j" . centaur-tabs-backward)
-  ("C-c t >" . centaur-tabs-move-current-tab-to-right)
-  ("C-c t <" . centaur-tabs-move-current-tab-to-left)
-  ("C-c t 0" . centaur-tabs-select-beg-tab)
-  ("C-c t $" . centaur-tabs-select-end-tab)
-)
-
-;; ox-hugo
-(use-package! ox-hugo
-  :ensure t
-  :after ox)
 
 ;;
 ;;; UI
@@ -121,29 +65,12 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ;;
-;;;; Templates
-(with-eval-after-load 'org
-  (setq org-capture-templates '(
-    ("h" "Hugo post" entry (file+olp "./blog/posts.org" "Blog")
-    (function org-hugo-new-subtree-post-capture-template))))
-)
-
-(with-eval-after-load 'org-capture
-  (defun org-hugo-new-subtree-post-capture-template ()
-    (let* ((title (read-from-minibuffer "Post Title: "))
-    (fname (org-hugo-slug title)))
-      (mapconcat #'identity `(
-        ,(concat "* TODO " title)
-        ":PROPERTIES:"
-        ,(concat ":EXPORT_FILE_NAME: " fname)
-        ,(concat ":EXPORT_DATE: " (format-time-string "%Y-%m-%d"))
-        ;;":EXPORT_DESCRIPTION: "
-        ;;":EXPORT_HUGO_CUSTOM_FRONT_MATTER: "
-        ":END:"
-        "%?\n")
-        "\n"))
-    )
-)
+;; Custom config
+(load! "lisp/windows")
+(load! "lisp/treemacs")
+(load! "lisp/centaur")
+(load! "lisp/templates")
+(load! "lisp/ox-hugo")
 
 ;;
 ;; Startup
@@ -154,4 +81,7 @@
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
   (doom/quickload-session)
-  (treemacs))
+  (treemacs)
+  )
+
+
