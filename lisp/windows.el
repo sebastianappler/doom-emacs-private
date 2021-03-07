@@ -1,4 +1,4 @@
-;;; init-windows.el --- Working with windows within frames -*- lexical-binding: t -*-
+;;; windows.el --- Working with windows within frames -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;; This is not about the "Windows" OS, but rather Emacs's "windows"
@@ -6,11 +6,6 @@
 ;; buffers.
 
 ;;; Code:
-
-;;----------------------------------------------------------------------------
-;; Navigate window layouts with "C-c <left>" and "C-c <right>"
-;;----------------------------------------------------------------------------
-(add-hook 'after-init-hook 'winner-mode)
 
 ;;----------------------------------------------------------------------------
 ;; When splitting window, show (other-buffer) in the new window
@@ -37,30 +32,6 @@
     (delete-other-windows)))
 
 (global-set-key (kbd "C-x 1") 'sanityinc/toggle-delete-other-windows)
-
-;;----------------------------------------------------------------------------
-;; Rearrange split windows
-;;----------------------------------------------------------------------------
-(defun split-window-horizontally-instead ()
-  "Kill any other windows and re-split such that the current window is on the top half of the frame."
-  (interactive)
-  (let ((other-buffer (and (next-window) (window-buffer (next-window)))))
-    (delete-other-windows)
-    (split-window-horizontally)
-    (when other-buffer
-      (set-window-buffer (next-window) other-buffer))))
-
-(defun split-window-vertically-instead ()
-  "Kill any other windows and re-split such that the current window is on the left half of the frame."
-  (interactive)
-  (let ((other-buffer (and (next-window) (window-buffer (next-window)))))
-    (delete-other-windows)
-    (split-window-vertically)
-    (when other-buffer
-      (set-window-buffer (next-window) other-buffer))))
-
-(global-set-key (kbd "C-x |") 'split-window-horizontally-instead)
-(global-set-key (kbd "C-x _") 'split-window-vertically-instead)
 
 
 ;; Borrowed from http://postmomentum.ch/blog/201304/blog-on-emacs
