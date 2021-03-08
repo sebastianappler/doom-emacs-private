@@ -11,8 +11,9 @@
     (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   :config
   (progn
-    (
-      setq treemacs-indentation          1
+    (setq
+      treemacs-indentation      1
+      treemacs-width            32
     )
    ;; (treemacs-git-mode -1)
   )
