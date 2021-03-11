@@ -12,8 +12,9 @@
   :config
   (progn
     (setq
-      treemacs-indentation      1
-      treemacs-width            32
+      treemacs-indentation                      1
+      treemacs-width                            32
+      treemacs-workspace-switch-cleanup         'all
     )
    ;; (treemacs-git-mode -1)
   )
