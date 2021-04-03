@@ -26,6 +26,7 @@
 (load! "lisp/centaur")
 (load! "lisp/templates")
 (load! "lisp/ox-hugo")
+(load! "lisp/bookmark+")
 
 ;;
 ;; Startup

@@ -51,3 +51,4 @@
 (package! treemacs-all-the-icons)
 (package! treemacs-icons-dired)
 (package! ox-hugo)
+(package! bookmark+)
