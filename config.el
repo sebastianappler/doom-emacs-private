@@ -3,17 +3,11 @@
 (setq user-full-name "Sebastian Appler"
       user-mail-address "sebastian.appler@protonmail.com"
 
+      doom-theme 'doom-dracula
+      org-directory "~/org/"
       display-line-numbers-type nil
       lsp-ui-sideline-enable nil
-      lsp-enable-symbol-highlighting nil
-      )
-
-;;
-;;; UI
-
-(setq doom-theme 'doom-dracula)
-(setq org-directory "~/org/")
-(setq display-line-numbers-type t)
+      lsp-enable-symbol-highlighting nil)
 
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -38,8 +32,4 @@
 (add-hook! 'doom-load-theme-hook :append
   (treemacs-load-theme "all-the-icons")
   (message "Loaded all-the-icons treemacs theme!")
-  (doom/quickload-session)
-  (treemacs)
-  )
-
-
+  (doom/quickload-session))
