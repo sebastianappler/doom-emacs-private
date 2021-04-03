@@ -27,6 +27,7 @@
 (load! "lisp/templates")
 (load! "lisp/ox-hugo")
 (load! "lisp/bookmark+")
+(load! "lisp/bash")
 
 ;;
 ;; Startup

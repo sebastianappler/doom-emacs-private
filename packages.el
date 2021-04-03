@@ -52,3 +52,4 @@
 (package! treemacs-icons-dired)
 (package! ox-hugo)
 (package! bookmark+)
+(package! lsp-mode)
