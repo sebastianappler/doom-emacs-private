@@ -22,6 +22,7 @@
 (load! "lisp/ox-hugo")
 (load! "lisp/bookmark+")
 (load! "lisp/bash")
+(load! "lisp/irc")
 
 ;;
 ;; Startup
