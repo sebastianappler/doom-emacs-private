@@ -5,7 +5,6 @@
 
       doom-theme 'doom-dracula
       org-directory "~/org/"
-      display-line-numbers-type nil
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
 
@@ -23,6 +22,7 @@
 (load! "lisp/bookmark+")
 (load! "lisp/bash")
 (load! "lisp/irc")
+(load! "lisp/gdb")
 
 ;;
 ;; Startup
