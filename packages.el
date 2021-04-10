@@ -53,3 +53,4 @@
 (package! ox-hugo)
 (package! bookmark+)
 (package! lsp-mode)
+(package! doom-themes :pin "6c4e65b..." :recipe (:host github :repo "sebastianappler/emacs-doom-themes"))

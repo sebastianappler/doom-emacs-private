@@ -17,12 +17,12 @@
 (load! "lisp/windows")
 (load! "lisp/treemacs")
 (load! "lisp/centaur")
-(load! "lisp/templates")
 (load! "lisp/ox-hugo")
 (load! "lisp/bookmark+")
 (load! "lisp/bash")
 (load! "lisp/irc")
 (load! "lisp/gdb")
+(load! "lisp/lsp")
 
 ;;
 ;; Startup
