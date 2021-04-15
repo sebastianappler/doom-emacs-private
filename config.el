@@ -32,5 +32,4 @@
 ;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
 (add-hook! 'doom-load-theme-hook :append
   (treemacs-load-theme "all-the-icons")
-  (message "Loaded all-the-icons treemacs theme!")
-  (doom/quickload-session))
+  (message "Loaded all-the-icons treemacs theme!"))
