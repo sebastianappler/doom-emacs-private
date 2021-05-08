@@ -18,7 +18,6 @@
 (load! "lisp/treemacs")
 (load! "lisp/centaur")
 (load! "lisp/ox-hugo")
-(load! "lisp/bookmark+")
 (load! "lisp/bash")
 (load! "lisp/irc")
 (load! "lisp/gdb")
