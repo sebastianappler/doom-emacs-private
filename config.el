@@ -23,6 +23,7 @@
 (load! "lisp/irc")
 (load! "lisp/gdb")
 (load! "lisp/lsp")
+(load! "lisp/org")
 
 ;;
 ;; Startup
