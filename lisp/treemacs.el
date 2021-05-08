@@ -15,13 +15,11 @@
       treemacs-width                            32
       treemacs-workspace-switch-cleanup         'all
     )
-   ;; (treemacs-git-mode -1)
   )
   :bind
   (:map global-map
      ("M-0"             .       treemacs-select-window)
-     ("C-c C-w s"             .       treemacs-switch-workspace)
-     ))
+     ("C-c C-w s"       .       treemacs-switch-workspace)))
 
 (add-hook! counsel-bookmark
   (treemacs-display-current-project-exclusively))
@@ -34,5 +32,6 @@
     ))
 
 (add-hook! 'treemacs-select-functions #'treemacs-expand-when-first-used)
+(add-hook! 'treemacs-select-functions #'hide-mode-line-mode)
 (add-hook! 'treemacs-switch-workspace-hook #'treemacs-expand-when-first-used)
 (add-hook! 'treemacs-switch-workspace-hook #'treemacs-select-window)
