@@ -6,7 +6,6 @@
 
 ;; Treemacs
 (use-package! treemacs
-  :defer t
   :init
     (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   :config
@@ -15,7 +14,6 @@
       treemacs-indentation                      1
       treemacs-width                            32
       treemacs-workspace-switch-cleanup         'all
-      lsp-treemacs-sync-mode                    1
     )
    ;; (treemacs-git-mode -1)
   )
