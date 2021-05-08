@@ -61,9 +61,4 @@ Call a second time to restore the original window configuration."
              (buffer-name))))
 
 (global-set-key (kbd "C-c <down>") 'sanityinc/toggle-current-window-dedication)
-
-(setq initial-frame-alist
-        (append '((width . 120) (height . 100) (top . 0) (left . 0))
-                initial-frame-alist))
-
 ;;; windows.el ends here
