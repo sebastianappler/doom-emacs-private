@@ -24,6 +24,7 @@
 (load! "lisp/gdb")
 (load! "lisp/lsp")
 (load! "lisp/org")
+(load! "lisp/evil")
 
 ;;
 ;; Startup
