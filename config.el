@@ -29,7 +29,7 @@
 ;;
 ;; Startup
 (setq initial-frame-alist
-        (append '((width . 125) (height . 100) (top . 0) (left . 0))
+        (append '((width . 130) (height . 100) (top . 0) (left . 0))
                 initial-frame-alist))
 
 ;; Doom initialize ui changes very late in the startup process
