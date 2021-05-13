@@ -28,9 +28,8 @@
 ;;
 ;; Startup
 (setq initial-frame-alist
-        (append '((width . 130) (height . 100) (top . 0) (left . 0))
+        (append '((width . 137) (height . 100) (top . 0) (left . 0))
                 initial-frame-alist))
-
 ;; Doom initialize ui changes very late in the startup process
 ;; To make sure they are loaded append logic using either doom-load-theme-hook or doom-after-init-modules-hook
 ;; Reference https://github.com/hlissner/doom-emacs/blob/develop/core/core-ui.el#L664-L665
