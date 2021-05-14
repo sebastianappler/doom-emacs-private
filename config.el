@@ -4,7 +4,6 @@
       user-mail-address "sebastian.appler@protonmail.com"
 
       doom-theme 'doom-dracula
-      org-directory "~/org/"
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
 
@@ -13,18 +12,15 @@
 
 ;;
 ;; Custom config
-
-(load! "lisp/windows")
-(load! "lisp/treemacs")
-(load! "lisp/centaur")
-(load! "lisp/ox-hugo")
 (load! "lisp/bash")
-(load! "lisp/irc")
+(load! "lisp/centaur")
+(load! "lisp/evil")
 (load! "lisp/gdb")
+(load! "lisp/irc")
 (load! "lisp/lsp")
 (load! "lisp/org")
-(load! "lisp/evil")
-
+(load! "lisp/treemacs")
+(load! "lisp/windows")
 ;;
 ;; Startup
 (setq initial-frame-alist

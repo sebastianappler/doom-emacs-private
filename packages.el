@@ -50,5 +50,4 @@
 ;(unpin! t)
 (package! treemacs-all-the-icons)
 (package! treemacs-icons-dired)
-(package! ox-hugo)
 (package! lsp-mode)
