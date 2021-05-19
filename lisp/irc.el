@@ -1,10 +1,11 @@
 ;;; lisp/irc.el -*- lexical-binding: t; -*-
 
 (after! circe
-  (set-irc-server! "chat.freenode.net"
+  (set-irc-server! "irc.libera.chat"
                    `(:tls t
                      :port 6697
                      :nick "sappler"
-                     :sasl-username ,(+pass-get-user "irc/freenode")
-                     :sasl-password (lambda (&rest _) (+pass-get-secret "irc/freenode"))
-                     :channels ("#emacs"))))
+                     :sasl-username ,(+pass-get-user "irc/libera.chat")
+                     :sasl-password (lambda (&rest _) (+pass-get-secret "irc/libera.chat"))
+                     :channels ("#emacs")
+                     )))
