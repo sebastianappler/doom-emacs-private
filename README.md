@@ -1,6 +1,6 @@
 # doom-emacs-private
 
-My private doom emacs config
+My private doom emacs config.
 
 ## Install
 
