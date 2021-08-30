@@ -3,6 +3,7 @@
 (setq user-full-name "Sebastian Appler"
       user-mail-address "sebastian.appler@protonmail.com"
 
+      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'regular)
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors"
       +lsp-prompt-to-install-server 'quiet
