@@ -13,6 +13,13 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ;;
+;; Startup
+(setq initial-frame-alist
+      (append '((width . 140))
+                initial-frame-alist))
+
+(add-to-list 'initial-frame-alist '(fullscreen . fullheight))
+;;
 ;; Custom config
 (load! "lisp/bash")
 (load! "lisp/centaur")
@@ -23,8 +30,3 @@
 (load! "lisp/org")
 (load! "lisp/treemacs")
 (load! "lisp/windows")
-;;
-;; Startup
-(setq initial-frame-alist
-        (append '((width . 137) (height . 100) (top . 0) (left . 0))
-                initial-frame-alist))
