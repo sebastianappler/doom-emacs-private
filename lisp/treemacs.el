@@ -26,4 +26,3 @@
 (add-hook! 'treemacs-select-functions #'treemacs-expand-when-first-used)
 (add-hook! 'treemacs-select-functions #'hide-mode-line-mode)
 (add-hook! 'treemacs-switch-workspace-hook #'treemacs-expand-when-first-used)
-(add-hook! 'treemacs-switch-workspace-hook #'treemacs-select-window)
