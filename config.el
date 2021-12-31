@@ -31,3 +31,4 @@
 (load! "lisp/org")
 (load! "lisp/treemacs")
 (load! "lisp/windows")
+(load! "lisp/verb")
