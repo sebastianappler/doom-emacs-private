@@ -51,4 +51,3 @@
 (package! treemacs-icons-dired)
 (package! lsp-mode)
 (package! emacs-w3m)
-(package! verb)
