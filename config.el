@@ -13,6 +13,13 @@
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
+;; Info-mode
+(map!
+  :map Info-mode-map
+  :prefix "g"
+  :n "l" #'Info-scroll-up
+  :n "h" #'Info-scroll-down)
+
 ;;
 ;; Startup
 (setq initial-frame-alist
