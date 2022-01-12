@@ -34,6 +34,7 @@
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")
+(load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/org")
 (load! "lisp/treemacs")
