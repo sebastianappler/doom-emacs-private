@@ -30,12 +30,12 @@
 ;;
 ;; Custom config
 (load! "lisp/bash")
-(load! "lisp/centaur")
+;; (load! "lisp/centaur")
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/org")
-(load! "lisp/treemacs")
+;; (load! "lisp/treemacs")
 (load! "lisp/windows")
