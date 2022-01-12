@@ -1,8 +1,5 @@
 (map! :n  "<f12>"  #'evil-goto-definition)
 
-(after! evil-snipe
-  (evil-snipe-mode -1))
-
 ;; Avoids annoying behaviour where pressing "q" and ":" in
 ;; sequence opens a Command Line window that will block your
 ;; commands as visual mode is default.
