@@ -49,7 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! treemacs-icons-dired)
-(package! lsp-mode)
 (package! emacs-w3m)
 (package! kubernetes)
 (package! kubernetes-evil)
