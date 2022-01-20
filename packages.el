@@ -52,3 +52,4 @@
 (package! emacs-w3m)
 (package! kubernetes)
 (package! kubernetes-evil)
+(package! moom)

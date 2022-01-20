@@ -22,19 +22,10 @@
 
 ;;
 ;; Startup
+(with-eval-after-load "moom"
+  (moom-mode 1))
 
-;; Set initial frame size at current monitor top left
-;; with fullheight and half width
-(defun set-initial-frame ()
-  (let* ((base-factor 0.557)
-    (a-width (/ (* (display-pixel-width) base-factor) 2))
-        (a-height (display-pixel-height))
-        (a-left (truncate (/ (- (display-pixel-width) a-width) 2)))
-    (a-top (truncate (display-pixel-height))))
-    (set-frame-position (selected-frame) a-left a-top)
-    (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
-(setq frame-resize-pixelwise t)
-(set-initial-frame)
+(moom-fill-left)
 
 ;;
 ;; Custom config
