@@ -7,3 +7,7 @@
 ;; ":bd<RET>" you would have to type ":ibd<RET>" to enter
 ;; insert mode for the Command Line window
 (evil-set-initial-state 'evil-command-window-mode 'insert)
+
+(use-package! evil-owl
+  :config
+  (evil-owl-mode))

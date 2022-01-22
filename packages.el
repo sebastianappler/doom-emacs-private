@@ -53,3 +53,4 @@
 (package! kubernetes)
 (package! kubernetes-evil)
 (package! moom)
+(package! evil-owl)
