@@ -10,4 +10,8 @@
 
 (use-package! evil-owl
   :config
+  (define-key! evil-owl-mode-map [remap evil-record-macro] 'nil)
+  (define-key! evil-owl-mode-map [remap evil-set-marker] 'nil)
+  (define-key! evil-owl-mode-map [remap evil-goto-mark] 'nil)
+  (define-key! evil-owl-mode-map [remap evil-goto-mark-line] 'nil)
   (evil-owl-mode))
