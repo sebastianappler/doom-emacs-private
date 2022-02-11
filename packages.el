@@ -54,3 +54,4 @@
 (package! kubernetes-evil)
 (package! moom)
 (package! evil-owl)
+(package! dired-quick-sort)

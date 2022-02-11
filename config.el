@@ -26,11 +26,11 @@
   (moom-mode 1))
 
 (moom-fill-left)
-
 ;;
 ;; Custom config
 (load! "lisp/bash")
 ;; (load! "lisp/centaur")
+(load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")

@@ -37,7 +37,7 @@
        hl-todo             ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
        ;;indent-guides     ; highlighted indent columns
-       (ligatures +extra)  ; ligatures and symbols to make your code pretty again
+       ;;(ligatures +extra); ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
        ;;neotree           ; a project drawer, like NERDTree for vim
        (modeline +light)   ; snazzy, atom-inspired modeline, plus api
