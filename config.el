@@ -29,11 +29,13 @@
 ;;
 ;; Custom config
 (load! "lisp/bash")
+;; (load! "lisp/bash")
 ;; (load! "lisp/centaur")
 (load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")
+(load! "lisp/javascript")
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/org")
