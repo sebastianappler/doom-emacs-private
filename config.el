@@ -11,13 +11,17 @@
       lsp-enable-symbol-highlighting nil)
 
 (custom-set-faces!
-  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'violet))))
-  `(web-mode-function-name-face (t (:foreground ,(doom-color 'green))))
-  `(web-mode-function-call-face (t (:foreground ,(doom-color 'green))))
+  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
+  `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
+  `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions))))
 
-  `(markdown-header-face (t (:foreground ,(doom-color 'magenta))))
-  `(markdown-link-face (t (:foreground ,(doom-color 'green))))
-  `(markdown-url-face (t (:foreground ,(doom-color 'violet))))
+  `(markdown-header-face-1 (t (:foreground ,(doom-color 'level1))))
+  `(markdown-header-face-2 (t (:foreground ,(doom-color 'level2))))
+  `(markdown-header-face-3 (t (:foreground ,(doom-color 'level3))))
+  `(markdown-header-face-4 (t (:foreground ,(doom-color 'level4))))
+  `(markdown-header-delimiter-face (t (:foreground ,(doom-color 'comments))))
+  `(markdown-link-face (t (:foreground ,(doom-color 'orange))))
+  `(markdown-url-face (t (:foreground ,(doom-color 'comments))))
   )
 
 ;; Prevents some cases of Emacs flickering
