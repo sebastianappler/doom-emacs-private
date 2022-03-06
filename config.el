@@ -11,7 +11,7 @@
       lsp-enable-symbol-highlighting nil)
 
 (custom-set-faces!
-  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'cyan))))
+  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'violet))))
   `(web-mode-function-name-face (t (:foreground ,(doom-color 'green))))
   `(web-mode-function-call-face (t (:foreground ,(doom-color 'green))))
 
