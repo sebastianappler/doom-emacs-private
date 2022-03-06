@@ -10,6 +10,16 @@
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
 
+(custom-set-faces!
+  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'cyan))))
+  `(web-mode-function-name-face (t (:foreground ,(doom-color 'green))))
+  `(web-mode-function-call-face (t (:foreground ,(doom-color 'green))))
+
+  `(markdown-header-face (t (:foreground ,(doom-color 'magenta))))
+  `(markdown-link-face (t (:foreground ,(doom-color 'green))))
+  `(markdown-url-face (t (:foreground ,(doom-color 'violet))))
+  )
+
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
