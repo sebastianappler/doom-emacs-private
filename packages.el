@@ -49,9 +49,12 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 ;; (package! treemacs-icons-dired)
+;;
+(package! evil-snipe :disable t)
 (package! emacs-w3m)
 (package! kubernetes)
 (package! kubernetes-evil)
 (package! moom)
 (package! evil-owl)
 (package! dired-quick-sort)
+(package! ace-jump-mode)

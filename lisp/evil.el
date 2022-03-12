@@ -1,4 +1,9 @@
-(map! :n  "<f12>"  #'evil-goto-definition)
+(map!
+ :n
+ "<f12>"      #'evil-goto-definition
+ :nv
+ "s"          #'evil-ace-jump-char-mode)
+
 
 ;; Avoids annoying behaviour where pressing "q" and ":" in
 ;; sequence opens a Command Line window that will block your
