@@ -34,12 +34,16 @@
   :n "l" #'Info-scroll-up
   :n "h" #'Info-scroll-down)
 
+(map! :leader
+      :desc "Find file other window"    "C-SPC" #'projectile-find-file-other-window)
+
 ;;
 ;; Startup
 (with-eval-after-load "moom"
   (moom-mode 1))
 
 (moom-fill-left)
+
 ;;
 ;; Custom config
 (load! "lisp/bash")
