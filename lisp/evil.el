@@ -21,6 +21,6 @@
   (define-key! evil-owl-mode-map [remap evil-goto-mark-line] 'nil)
   ;; Set popup size
   (set-popup-rules!
-    '(   ("^\\*evil-owl" :slot -1 :size 0.4 :select t)))
+    '(("^\\*evil-owl" :slot -1 :size 0.3 :select t)))
 
   (evil-owl-mode))
