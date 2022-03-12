@@ -40,7 +40,7 @@
        ;;(ligatures +extra); ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
        ;;neotree           ; a project drawer, like NERDTree for vim
-       (modeline +light)   ; snazzy, atom-inspired modeline, plus api
+       modeline            ; snazzy, atom-inspired modeline, plus api
        nav-flash           ; blink cursor line after big motions
        ophints             ; highlight the region an operation acts on
        (popup
