@@ -1,5 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+;;
+;; Variables
 (setq user-full-name "Sebastian Appler"
       user-mail-address "sebastian.appler@protonmail.com"
 
@@ -10,6 +12,8 @@
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
 
+;;
+;; Theme
 (custom-set-faces!
   `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
   `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
@@ -24,17 +28,14 @@
   `(markdown-url-face (t (:foreground ,(doom-color 'comments))))
   )
 
-;; Prevents some cases of Emacs flickering
-(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
-
 ;;
-;; General Key Bindings
+;; Key Bindings
 (map!
  :desc "Backward kill word"             "C-<backspace>"         'nv-delete-back-all
  :desc "Backward kill expression"       "C-S-<backspace>"       'backward-kill-sexp
 
  :leader ;; SPC
- :desc "Find file other window"    "C-SPC" #'projectile-find-file-other-window)
+ :desc "Find file other window"         "C-SPC"                #'projectile-find-file-other-window)
 
 ;; Info-mode
 (map!
@@ -44,17 +45,13 @@
   :n "h" #'Info-scroll-down)
 
 ;;
-;; Startup
-(with-eval-after-load "moom"
-  (moom-mode 1))
-
-(moom-fill-left)
+;; Hacks
+;; Prevents some cases of Emacs flickering
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ;;
-;; Custom config
+;; Package Config
 (load! "lisp/bash")
-;; (load! "lisp/bash")
-;; (load! "lisp/centaur")
 (load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
@@ -63,5 +60,10 @@
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/org")
-;; (load! "lisp/treemacs")
 (load! "lisp/windows")
+;;
+;; Startup
+(with-eval-after-load "moom"
+  (moom-mode 1))
+
+(moom-fill-left)
