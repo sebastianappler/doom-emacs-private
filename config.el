@@ -27,15 +27,21 @@
 ;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
+;;
+;; General Key Bindings
+(map!
+ :desc "Backward kill word"             "C-<backspace>"         'nv-delete-back-all
+ :desc "Backward kill expression"       "C-S-<backspace>"       'backward-kill-sexp
+
+ :leader ;; SPC
+ :desc "Find file other window"    "C-SPC" #'projectile-find-file-other-window)
+
 ;; Info-mode
 (map!
   :map Info-mode-map
   :prefix "g"
   :n "l" #'Info-scroll-up
   :n "h" #'Info-scroll-down)
-
-(map! :leader
-      :desc "Find file other window"    "C-SPC" #'projectile-find-file-other-window)
 
 ;;
 ;; Startup

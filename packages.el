@@ -58,3 +58,4 @@
 (package! evil-owl)
 (package! dired-quick-sort)
 (package! ace-jump-mode)
+(package! nv-delete-back)
