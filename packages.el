@@ -59,3 +59,6 @@
 (package! dired-quick-sort)
 (package! ace-jump-mode)
 (package! nv-delete-back)
+
+(package! tree-sitter)
+(package! tree-sitter-langs)

@@ -60,7 +60,9 @@
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/org")
+(load! "lisp/treesitter")
 (load! "lisp/windows")
+
 ;;
 ;; Startup
 (with-eval-after-load "moom"
