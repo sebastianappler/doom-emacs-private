@@ -8,6 +8,7 @@
       doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'regular)
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors"
+      markdown-fontify-code-blocks-natively t
       +lsp-prompt-to-install-server 'quiet
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
