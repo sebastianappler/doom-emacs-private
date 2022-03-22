@@ -52,6 +52,7 @@
 ;;
 ;; Package Config
 (load! "lisp/bash")
+(load! "lisp/csharp")
 (load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
