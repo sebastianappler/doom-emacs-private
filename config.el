@@ -19,14 +19,6 @@
   `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
   `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
   `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions))))
-
-  `(markdown-header-face-1 (t (:foreground ,(doom-color 'level1))))
-  `(markdown-header-face-2 (t (:foreground ,(doom-color 'level2))))
-  `(markdown-header-face-3 (t (:foreground ,(doom-color 'level3))))
-  `(markdown-header-face-4 (t (:foreground ,(doom-color 'level4))))
-  `(markdown-header-delimiter-face (t (:foreground ,(doom-color 'comments))))
-  `(markdown-link-face (t (:foreground ,(doom-color 'orange))))
-  `(markdown-url-face (t (:foreground ,(doom-color 'comments))))
   )
 
 ;;
@@ -61,6 +53,7 @@
 (load! "lisp/javascript")
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
+(load! "lisp/markdown")
 (load! "lisp/org")
 (load! "lisp/treesitter")
 (load! "lisp/windows")
