@@ -4,6 +4,6 @@ My private doom emacs config.
 
 ## Install
 
-``` sh
+```sh
 git clone https://github.com/sebastianappler/doom-emacs-private ~/.config/doom
 ```
