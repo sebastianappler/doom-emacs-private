@@ -11,4 +11,4 @@
 
 (map!
   :map dired-mode-map
-  :n "s" #'hydra-dired-quick-sort/body)
+  :n "S" #'hydra-dired-quick-sort/body)
