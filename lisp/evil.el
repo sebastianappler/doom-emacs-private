@@ -1,3 +1,5 @@
+(setq +evil-want-o/O-to-continue-comments nil)
+
 (map!
  :n
  "<f12>"      #'evil-goto-definition
