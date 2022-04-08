@@ -1,5 +1,10 @@
 ;;; lisp/javascript.el -*- lexical-binding: t; -*-
 
+(custom-set-faces!
+  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
+  `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
+  `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions)))))
+
 (setq-hook! 'typescript-mode-hook +format-with-lsp nil)
 (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
 
