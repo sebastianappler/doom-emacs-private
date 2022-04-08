@@ -3,6 +3,7 @@
 (use-package! kubernetes
   :commands (kubernetes-overview)
   :config
+  (setq kubernetes-default-overview-view 'pods)
   (set-popup-rules!
     '(("^\\*kubernetes overview" :ignore t))))
 
