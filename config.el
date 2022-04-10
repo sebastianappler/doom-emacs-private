@@ -14,6 +14,15 @@
       pixel-scroll-precision-large-scroll-height 30.0
       pixel-scroll-precision-interpolation-factor 10)
 
+;; A sacrifice to exclude company-dabbrev and company-yasnippet in text-mode to
+;; get proper completion with company-ispell. If it's used with a grouped
+;; backend it will complete everything lowercased i.e. if you start a new word
+;; with captial letter it will rewrite the completion lowercased so you will
+;; need to go back and fix the casing.
+;;
+;; See issue: https://github.com/company-mode/company-mode/issues/1096
+(set-company-backend! 'text-mode 'company-ispell)
+
 ;;
 ;; UI
 
