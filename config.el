@@ -32,11 +32,6 @@
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors")
 
-(custom-set-faces!
-  `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
-  `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
-  `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions)))))
-
 ;;
 ;; Key Bindings
 
