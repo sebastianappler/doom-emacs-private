@@ -65,7 +65,9 @@
 
 ;;
 ;; Startup
-(with-eval-after-load "moom"
-  (moom-mode 1))
 
-(moom-fill-left)
+(when (display-graphic-p)
+  (with-eval-after-load "moom"
+    (moom-mode 1))
+
+  (moom-fill-left))
