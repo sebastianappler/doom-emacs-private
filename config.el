@@ -13,6 +13,12 @@
       lsp-ui-sideline-enable nil
       lsp-enable-symbol-highlighting nil)
 
+;; Smooth scrolling
+(pixel-scroll-precision-mode)
+(setq pixel-scroll-precision-use-momentum nil
+      pixel-scroll-precision-large-scroll-height 30.0
+      pixel-scroll-precision-interpolation-factor 10)
+
 ;;
 ;; Theme
 (custom-set-faces!
