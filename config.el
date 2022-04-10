@@ -1,18 +1,17 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;;
-;; Emacs native
+;; General config
 
 (setq user-full-name "Sebastian Appler"
-      user-mail-address "sebastian.appler@protonmail.com"
-      )
-
+      user-mail-address "sebastian.appler@protonmail.com")
 
 ;; Smooth scrolling
 (pixel-scroll-precision-mode)
+
 (setq pixel-scroll-precision-use-momentum nil
       pixel-scroll-precision-large-scroll-height 30.0
-      pixel-scroll-precision-interpolation-factor 10)
+      pixel-scroll-precision-interpolation-factor 5)
 
 ;; A sacrifice to exclude company-dabbrev and company-yasnippet in text-mode to
 ;; get proper completion with company-ispell. If it's used with a grouped
@@ -22,6 +21,9 @@
 ;;
 ;; See issue: https://github.com/company-mode/company-mode/issues/1096
 (set-company-backend! 'text-mode 'company-ispell)
+
+;; Show fill column indicator in text-mode
+(add-hook! 'text-mode-hook (display-fill-column-indicator-mode 1))
 
 ;;
 ;; UI
@@ -34,8 +36,6 @@
   `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
   `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
   `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions)))))
-
-(setq company-dabbrev-ignore-case 'keep-prefix)
 
 ;;
 ;; Key Bindings

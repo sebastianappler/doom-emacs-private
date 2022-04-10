@@ -12,9 +12,3 @@
   `(markdown-link-face (t (:foreground ,(doom-color 'orange))))
   `(markdown-url-face (t (:foreground ,(doom-color 'comments))))
   )
-
-(defun enable-auto-fill-edit ()
-    (auto-fill-mode 1)
-    (display-fill-column-indicator-mode 1))
-
-(add-hook! 'gfm-mode-hook 'enable-auto-fill-edit)
