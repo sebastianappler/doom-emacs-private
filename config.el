@@ -1,17 +1,12 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;;
-;; Variables
+;; Emacs native
+
 (setq user-full-name "Sebastian Appler"
       user-mail-address "sebastian.appler@protonmail.com"
+      )
 
-      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'regular)
-      doom-theme 'doom-dracula
-      doom-themes-treemacs-theme "doom-colors"
-      markdown-fontify-code-blocks-natively t
-      +lsp-prompt-to-install-server 'quiet
-      lsp-ui-sideline-enable nil
-      lsp-enable-symbol-highlighting nil)
 
 ;; Smooth scrolling
 (pixel-scroll-precision-mode)
@@ -20,21 +15,29 @@
       pixel-scroll-precision-interpolation-factor 10)
 
 ;;
-;; Theme
+;; UI
+
+(setq doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'regular)
+      doom-theme 'doom-dracula
+      doom-themes-treemacs-theme "doom-colors")
+
 (custom-set-faces!
   `(web-mode-html-tag-face (t (:foreground ,(doom-color 'type))))
   `(web-mode-function-name-face (t (:foreground ,(doom-color 'functions))))
-  `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions))))
-  )
+  `(web-mode-function-call-face (t (:foreground ,(doom-color 'functions)))))
+
+(setq company-dabbrev-ignore-case 'keep-prefix)
 
 ;;
 ;; Key Bindings
+
 (map!
  :desc "Backward kill word"             "C-<backspace>"         'nv-delete-back-all
  :desc "Backward kill expression"       "C-S-<backspace>"       'backward-kill-sexp
 
  :leader ;; SPC
  :desc "Find file other window"         "C-SPC"                #'projectile-find-file-other-window)
+
 
 ;; Info-mode
 (map!
@@ -49,7 +52,8 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ;;
-;; Package Config
+;; Module Config
+
 (load! "lisp/bash")
 (load! "lisp/dired")
 (load! "lisp/evil")

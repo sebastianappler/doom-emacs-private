@@ -1,5 +1,8 @@
 ;;; lisp/markdown.el -*- lexical-binding: t; -*-
 
+;; Enable syntax highlightning in code blocks
+(setq markdown-fontify-code-blocks-natively t)
+
 (custom-set-faces!
   `(markdown-header-face-1 (t (:foreground ,(doom-color 'level1))))
   `(markdown-header-face-2 (t (:foreground ,(doom-color 'level2))))
