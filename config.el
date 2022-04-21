@@ -23,7 +23,7 @@
 (set-company-backend! 'text-mode 'company-ispell)
 
 ;; Show fill column indicator in text-mode
-(add-hook! 'text-mode-hook (display-fill-column-indicator-mode 1))
+;;(add-hook! 'text-mode-hook (display-fill-column-indicator-mode 1))
 
 ;;
 ;; UI
