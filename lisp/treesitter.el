@@ -1,6 +1,7 @@
 ;;; lisp/treesitter.el -*- lexical-binding: t; -*-
 
 (use-package! tree-sitter
+  :defer t
   :config
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)

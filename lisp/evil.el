@@ -16,6 +16,7 @@
 (evil-set-initial-state 'evil-command-window-mode 'insert)
 
 (use-package! evil-owl
+  :defer t
   :config
   (define-key! evil-owl-mode-map [remap evil-record-macro] 'nil)
   (define-key! evil-owl-mode-map [remap evil-set-marker] 'nil)

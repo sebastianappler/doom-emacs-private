@@ -1,4 +1,5 @@
 (use-package! centaur-tabs
+  :defer t
   :bind
   ("C-c t s" . centaur-tabs-counsel-switch-group)
   ("C-c t w" . centaur-tabs--kill-this-buffer-dont-ask)

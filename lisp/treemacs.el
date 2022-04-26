@@ -1,6 +1,6 @@
 ;; Treemacs
 (use-package! treemacs
-  :init
+  :defer t
   :config
     (setq
       treemacs-indentation                      1

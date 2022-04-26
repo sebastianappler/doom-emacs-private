@@ -1,6 +1,7 @@
 ;;; lisp/kubernetes.el -*- lexical-binding: t; -*-
 
 (use-package! kubernetes
+  :defer t
   :commands (kubernetes-overview)
   :config
   (setq kubernetes-default-overview-view 'pods)
@@ -8,6 +9,7 @@
     '(("^\\*kubernetes overview" :ignore t))))
 
 (use-package! kubernetes-evil
+  :defer t
   :after (kubernetes-overview)
   :config
   (map!
