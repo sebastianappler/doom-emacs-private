@@ -60,6 +60,7 @@
 
 (load! "lisp/bash")
 (load! "lisp/dired")
+(load! "lisp/csharp")
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")
