@@ -6,7 +6,7 @@
   :config
   (setq kubernetes-default-overview-view 'pods)
   (set-popup-rules!
-    '(("^\\*kubernetes overview" :ignore t))))
+    '(("^\\*kubernetes*" :ignore t))))
 
 (use-package! kubernetes-evil
   :after (kubernetes-overview))
