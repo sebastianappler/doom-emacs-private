@@ -39,7 +39,7 @@
 ;;             },
 ;;             "env": {
 ;;                 "ASPNETCORE_ENVIRONMENT": "Development",
-;;                 "ASPNETCORE_URLS": "http://*:5050"
+;;                 "ASPNETCORE_URLS": "https://localhost:7239;http://localhost:5299"
 ;;             },
 ;;             "sourceFileMap": {
 ;;                 "/Views": "${workspaceFolder}/Views"
