@@ -69,7 +69,6 @@
 (load! "lisp/lsp")
 (load! "lisp/markdown")
 (load! "lisp/org")
-(load! "lisp/treesitter")
 (load! "lisp/windows")
 
 ;;
