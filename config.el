@@ -9,10 +9,6 @@
 ;; Smooth scrolling
 (pixel-scroll-precision-mode)
 
-(setq pixel-scroll-precision-use-momentum nil
-      pixel-scroll-precision-large-scroll-height 30.0
-      pixel-scroll-precision-interpolation-factor 5)
-
 ;; A sacrifice to exclude company-dabbrev and company-yasnippet in text-mode to
 ;; get proper completion with company-ispell. If it's used with a grouped
 ;; backend it will complete everything lowercased i.e. if you start a new word
