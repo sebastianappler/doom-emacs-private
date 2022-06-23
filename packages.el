@@ -53,7 +53,7 @@
 (package! evil-snipe :disable t)
 (package! emacs-w3m)
 (package! kubernetes
-  :recipe (:build (:not compile)))
+ :recipe (:build (:not compile)))
 (package! kubernetes-evil)
 (package! moom)
 (package! evil-owl)
@@ -63,3 +63,4 @@
 
 (package! tree-sitter)
 (package! tree-sitter-langs)
+(package! atomic-chrome)

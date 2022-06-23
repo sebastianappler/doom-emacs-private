@@ -23,7 +23,6 @@
 
 ;;
 ;; UI
-
 (setq doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'regular)
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors")
@@ -54,6 +53,7 @@
 ;;
 ;; Module Config
 
+;;(load! "lisp/atomic-chrome")
 (load! "lisp/bash")
 (load! "lisp/dired")
 (load! "lisp/csharp")

@@ -22,6 +22,7 @@
        :completion
        (company
          +childframe)      ; the ultimate code completion backend
+       ;;(corfu +orderless)
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
@@ -110,6 +111,7 @@
        ;;taskrunner        ; taskrunner for all your projects
        (terraform +lsp)    ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
+       ;;tree-sitter         ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
