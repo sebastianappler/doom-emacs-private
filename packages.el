@@ -50,17 +50,15 @@
 ;(unpin! t)
 ;; (package! treemacs-icons-dired)
 ;;
-(package! evil-snipe :disable t)
+
+;;(package! atomic-chrome)
+(package! ace-jump-mode)
+(package! dashboard)
+(package! dired-quick-sort)
 (package! emacs-w3m)
-(package! kubernetes
- :recipe (:build (:not compile)))
+(package! evil-owl)
+(package! evil-snipe :disable t :recipe (:build (:not compile)))
+(package! kubernetes)
 (package! kubernetes-evil)
 (package! moom)
-(package! evil-owl)
-(package! dired-quick-sort)
-(package! ace-jump-mode)
 (package! nv-delete-back)
-
-(package! tree-sitter)
-(package! tree-sitter-langs)
-(package! atomic-chrome)

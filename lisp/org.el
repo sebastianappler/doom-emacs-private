@@ -3,7 +3,8 @@
 
 (setq org-directory "~/org/"
       org-roam-directory (concat org-directory "notes/")
-      org-roam-db-location (concat org-roam-directory ".org-roam.db"))
+      org-roam-db-location (concat org-roam-directory ".org-roam.db")
+      org-agenda-include-diary t)
 
 ;;
 ;; Ox hugo

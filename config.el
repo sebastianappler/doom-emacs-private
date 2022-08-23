@@ -7,7 +7,7 @@
       user-mail-address "sebastian.appler@protonmail.com")
 
 ;; Smooth scrolling
-(pixel-scroll-precision-mode)
+;;(pixel-scroll-precision-mode)
 
 ;; A sacrifice to exclude company-dabbrev and company-yasnippet in text-mode to
 ;; get proper completion with company-ispell. If it's used with a grouped
@@ -40,10 +40,10 @@
 
 ;; Info-mode
 (map!
-  :map Info-mode-map
-  :prefix "g"
-  :n "l" #'Info-scroll-up
-  :n "h" #'Info-scroll-down)
+ :map Info-mode-map
+ :prefix "g"
+ :n "l" #'Info-scroll-up
+ :n "h" #'Info-scroll-down)
 
 ;;
 ;; Hacks
@@ -55,8 +55,9 @@
 
 ;;(load! "lisp/atomic-chrome")
 (load! "lisp/bash")
-(load! "lisp/dired")
+(load! "lisp/calendar/sv-kalender")
 (load! "lisp/csharp")
+(load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
 (load! "lisp/irc")
@@ -66,6 +67,13 @@
 (load! "lisp/markdown")
 (load! "lisp/org")
 (load! "lisp/windows")
+
+(use-package! dashboard
+  :ensure t
+  :config
+  (setq dashboard-center-content t)
+
+  (dashboard-setup-startup-hook))
 
 ;;
 ;; Startup
