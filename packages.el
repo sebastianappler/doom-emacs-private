@@ -59,6 +59,6 @@
 (package! evil-snipe :disable t :recipe (:build (:not compile)))
 (package! kubernetes)
 (package! kubernetes-evil)
-(package! moom)
 (package! nv-delete-back)
 (package! dirvish)
+(package! moom :pin "f94cf84138a81212ffe856599834f7824a1b6e95")
