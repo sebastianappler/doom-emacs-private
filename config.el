@@ -27,6 +27,10 @@
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors")
 
+(setq fancy-splash-image (concat doom-user-dir "assets/doom-emacs-gray.png"))
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+
 ;;
 ;; Key Bindings
 
@@ -57,7 +61,7 @@
 (load! "lisp/bash")
 (load! "lisp/calendar/sv-kalender")
 (load! "lisp/csharp")
-(load! "lisp/dashboard")
+;;(load! "lisp/dashboard")
 (load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
