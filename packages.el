@@ -54,7 +54,6 @@
 ;;(package! atomic-chrome)
 (package! ace-jump-mode)
 (package! dashboard)
-(package! dired-quick-sort)
 (package! emacs-w3m)
 (package! evil-owl)
 (package! evil-snipe :disable t :recipe (:build (:not compile)))
@@ -62,3 +61,4 @@
 (package! kubernetes-evil)
 (package! moom)
 (package! nv-delete-back)
+(package! dirvish)
