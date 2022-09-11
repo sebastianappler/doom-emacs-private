@@ -23,7 +23,7 @@
 
 ;;
 ;; UI
-(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16 :weight 'regular)
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 16 :weight 'regular)
       doom-theme 'doom-dracula
       doom-themes-treemacs-theme "doom-colors")
 
