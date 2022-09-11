@@ -14,7 +14,7 @@
   :config
   (set-popup-rule! "^ ?\\*Dirvish.*" :ignore t)
   (setq dirvish-cache-dir (concat doom-cache-dir "dirvish/")
-        dirvish-attributes '(vc-state file-size vscode-icon collapse subtree-state)
+        dirvish-attributes '(vc-state file-size all-the-icons collapse subtree-state)
         dirvish-mode-line-format
         '(:left (sort file-time symlink) :right (omit yank index))
         dired-listing-switches
