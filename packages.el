@@ -52,13 +52,13 @@
 ;;
 
 ;;(package! atomic-chrome)
+;;(package! dashboard)
+;;(package! emacs-w3m)
 (package! ace-jump-mode)
-(package! dashboard)
-(package! emacs-w3m)
+(package! dirvish)
 (package! evil-owl)
 (package! evil-snipe :disable t :recipe (:build (:not compile)))
 (package! kubernetes)
 (package! kubernetes-evil)
-(package! nv-delete-back)
-(package! dirvish)
 (package! moom :pin "f94cf84138a81212ffe856599834f7824a1b6e95")
+(package! nv-delete-back)
