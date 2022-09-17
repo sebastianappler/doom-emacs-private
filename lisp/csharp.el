@@ -1,7 +1,7 @@
 ;;; lisp/csharp.el -*- lexical-binding: t; -*-
 
 (add-to-list '+debugger--dap-alist
-        '((:lang csharp +lsp)     :after csharp-mode :require dap-netcore) t)
+             '((:lang csharp +lsp)     :after csharp-mode :require dap-netcore) t)
 
 (map!
  :map csharp-mode-map
@@ -12,6 +12,23 @@
  :n "<f11>"     #'dap-step-in
  :n "S-<f11>"   #'dap-step-out
  )
+
+(use-package! sharper
+  :defer t
+  :config
+  (defun sharper--get-project-file (dir)
+    (when dir
+      (let ((files (directory-files dir t "\\.csproj")))
+        (car files))))
+
+  (defun sharper--add-target (dotnet-target)
+    "Add TARGET if it doesn't exist on transient parameters"
+    (if (bound-and-true-p dotnet-target)
+        (dotnet-target)
+      (sharper--get-project-file (sharper--nearest-project-dir))))
+
+  (advice-add 'sharper--get-target :filter-return #'sharper--add-target))
+
 ;; Template for dotnet project with dap-debug
 ;;
 ;; .vscode/launch.json
