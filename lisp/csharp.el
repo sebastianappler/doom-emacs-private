@@ -16,7 +16,7 @@
 (use-package! sharper
   :defer t
   :config
-  (setq sharper-nuget-search-URL "https://azuresearch-usnc.nuget.org/query?q=%s&prerelease=false&semVerLevel=2.0.0&take=250")
+  (setq sharper-nuget-search-URL "https://azuresearch-usnc.nuget.org/query?q=%s&prerelease=false&semVerLevel=2.0.0&take=75")
 
   (defun sharper--get-project-file (dir)
     "Get csproj file path from directory."
