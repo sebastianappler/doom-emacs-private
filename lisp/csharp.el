@@ -16,18 +16,22 @@
 (use-package! sharper
   :defer t
   :config
+  (setq sharper-nuget-search-URL "https://azuresearch-usnc.nuget.org/query?q=%s&prerelease=false&semVerLevel=2.0.0&take=250")
+
   (defun sharper--get-project-file (dir)
+    "Get csproj file path from directory."
     (when dir
       (let ((files (directory-files dir t "\\.csproj")))
         (car files))))
 
   (defun sharper--get-target-advice-add-target (dotnet-target)
-    "Add TARGET if it doesn't exist on transient parameters"
+    "Advice to get target from nearest project if empty."
     (if (bound-and-true-p dotnet-target)
         (dotnet-target)
       (sharper--get-project-file (sharper--nearest-project-dir))))
 
   (defun sharper--nuget-search-advice-set-project (orig-fun &optional project-path)
+    "Advice nuget search to use path from nearest project if empty."
     (unless (bound-and-true-p project-path)
       (let (proj-dir proj-file)
         (setq proj-dir (sharper--nearest-project-dir))
@@ -36,6 +40,7 @@
 
   (advice-add 'sharper--get-target :filter-return #'sharper--get-target-advice-add-target)
   (advice-add 'sharper--nuget-search :around #'sharper--nuget-search-advice-set-project))
+
 
 ;; Template for dotnet project with dap-debug
 ;;
