@@ -62,3 +62,4 @@
 (package! kubernetes-evil)
 (package! moom :pin "f94cf84138a81212ffe856599834f7824a1b6e95")
 (package! nv-delete-back)
+(package! sharper :pin "8020a5da0327f9a18b4bdab474bf8d81c1b38ea7")
