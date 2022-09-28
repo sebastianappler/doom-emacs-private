@@ -70,6 +70,7 @@
 (load! "lisp/kubernetes")
 (load! "lisp/lsp")
 (load! "lisp/markdown")
+(load! "lisp/mu4e")
 (load! "lisp/org")
 (load! "lisp/windows")
 
