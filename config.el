@@ -62,6 +62,7 @@
 (load! "lisp/calendar/sv-kalender")
 (load! "lisp/csharp")
 ;;(load! "lisp/dashboard")
+(load! "lisp/dap")
 (load! "lisp/dired")
 (load! "lisp/evil")
 (load! "lisp/gdb")
@@ -72,6 +73,7 @@
 (load! "lisp/markdown")
 (load! "lisp/mu4e")
 (load! "lisp/org")
+(load! "lisp/rust")
 (load! "lisp/windows")
 
 ;;
