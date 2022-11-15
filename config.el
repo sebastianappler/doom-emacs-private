@@ -18,6 +18,11 @@
 ;; See issue: https://github.com/company-mode/company-mode/issues/1096
 (set-company-backend! 'text-mode 'company-ispell)
 
+;; Don't throw warning windows at me about docstring quotes
+(setq warning-minimum-level :error)
+;; Tramp did not like to have it's histfile overridden
+(setq tramp-histfile-override nil)
+
 ;; Show fill column indicator in text-mode
 ;;(add-hook! 'text-mode-hook (display-fill-column-indicator-mode 1))
 
