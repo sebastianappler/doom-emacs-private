@@ -5,7 +5,8 @@
       org-roam-directory (concat org-directory "notes/")
       org-roam-db-location (concat org-roam-directory ".org-roam.db")
       org-agenda-include-diary t
-      org-time-stamp-formats '("[%Y-%m-%d %a %H:%M]"))
+      org-time-stamp-formats '("[%Y-%m-%d %a %H:%M]")
+      org-log-note-clock-out t)
 
 (after! org
   (setq org-capture-templates
@@ -39,20 +40,18 @@
       (mapconcat #'identity `(
         ,(concat "#+title: " name)
         ""
-        ,"Project"
+        ,"* Project"
         ":PROPERTIES:"
         ,(concat ":NAME: " name)
         ":CATEGORY: Project"
         ,(concat ":CREATED: " (format-time-string "[%Y-%m-%d %a %H:%M]"))
         ":END:"
-        ""
         "** Description"
         "%?"
         "*** Goals"
         ""
         "** Tasks"
         "*** Backlog"
-        ""
         "*** Active"
         "*** Closed"
         ""
