@@ -65,6 +65,7 @@
 ;;(load! "lisp/atomic-chrome")
 (load! "lisp/bash")
 (load! "lisp/calendar/sv-kalender")
+(load! "lisp/corfu")
 (load! "lisp/csharp")
 ;;(load! "lisp/dashboard")
 (load! "lisp/dap")
@@ -81,7 +82,6 @@
 (load! "lisp/rust")
 (load! "lisp/windows")
 
-(load! "lisp/corfu")
 ;;
 ;; Startup
 

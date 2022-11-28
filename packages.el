@@ -65,7 +65,6 @@
 (package! sharper :pin "8020a5da0327f9a18b4bdab474bf8d81c1b38ea7")
 
 (package! corfu)
-(package! corfu-doc)
 (package! orderless)
 (package! kind-icon)
 (package! cape)

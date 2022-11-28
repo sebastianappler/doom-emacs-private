@@ -8,14 +8,6 @@
         corfu-quit-no-match t
         corfu-preselect-first t))
 
-(use-package corfu-doc
-  :hook
-  (corfu-mode . corfu-doc-mode)
-  :bind (:map corfu-map
-         ("M-n" . corfu-doc-scroll-down)
-         ("M-p" . corfu-doc-scroll-up)
-         ("M-d" . corfu-doc-toggle)))
-
 (use-package orderless
   :init
   ;; Tune the global completion style settings to your liking!
