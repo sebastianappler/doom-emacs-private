@@ -71,7 +71,7 @@
         ,(concat ":CUSTOM_ID: " (number-to-string (appler/next-issue-number)))
         ":END:"
         "** Definition of done"
-        "** Outcomde")
+        "** Outcome")
         "\n"))
 
   (defun appler/org-project-generate-filename ()
